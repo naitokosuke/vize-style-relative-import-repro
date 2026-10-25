@@ -1,5 +1,7 @@
 # vize-style-relative-import-repro
 
+Reported as [ubugeeei-prod/vize#10659](https://github.com/ubugeeei-prod/vize/issues/10659).
+
 Minimal reproduction for a production-build failure in [vize](https://github.com/ubugeeei-prod/vize)'s Vite plugin.
 
 A `<style>` block that imports a stylesheet by a path relative to its `.vue` file fails `vite build`. Since 0.516.0 the plugin gives each style block a root-relative id (`/src/components/Card.vue.__vize_style_0.css?…&vize-root-relative`). Vite's CSS pipeline takes that id as a file path, so it resolves `../styles/colors.css` against `/src/components` at the file-system root, a directory that does not exist.
