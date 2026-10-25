@@ -1,0 +1,15 @@
+{
+  "name": "vize-style-relative-import-repro",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vue": "3.5.44"
+  },
+  "devDependencies": {
+    "@vizejs/vite-plugin": "0.562.0",
+    "vite": "8.3.5"
+  }
+}
